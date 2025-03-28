@@ -2,7 +2,6 @@
   "name": "nayan",
   "version": "1.0.0",
   "description": "gdgfsfhgjhx",
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -17,6 +16,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "babel-jest": "^29.7.0",
+    "buffer": "^6.0.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "parcel": "^2.13.3",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "axios": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
