@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-// import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
@@ -12,14 +11,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import appStore from "./utils/appstore";
 import { Provider } from "react-redux";
 import Cart from "./components/Cart";
+import Login from "./components/Login";
 
-//whay lazy can do??
-//chunking
-//code splitting
-//lazy loading
-// lazy loading is a technique that allows you to load components on demand, rather than loading them all
-//dynamic bundling
-//dynamic import
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -65,10 +58,14 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />
-      }
+        element: <Cart />,
+      },
     ],
     errorElement: <Error />,
+  },
+  { path: "/login",
+    element: <Login />,
+
   },
 ]);
 
@@ -76,10 +73,3 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<RouterProvider router={appRouter} />);
 
-// root.render(
-//   <BrowserRouter>
-//      <Routes>
-//       <Route path="/" element = {<AppLayout/>} />
-//      </Routes>
-//   </BrowserRouter>
-// );

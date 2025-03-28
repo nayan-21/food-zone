@@ -15,7 +15,7 @@ const Header = () => {
       <div className="logo_container">
         <img
           className="logo-img w-24 rounded-full p-2"
-          src="https://i.pinimg.com/736x/08/3b/2f/083b2fe2646cd064e3a294bb716810f9.jpg"
+          src="https://masterbundles.com/wp-content/uploads/2023/02/3445-567.jpg"
         />
       </div>
       <div className="navbar flex items-center">
@@ -37,7 +37,7 @@ const Header = () => {
             <li className="mx-4">Cart - {cartItems.length}</li>
           </Link>
 
-          <button
+          <Link to={"/login"}><button
             className="border px-4 py-1 text-sm bg-[#d0ddd0] text-black rounded-lg mx-4"
             onClick={() => {
               logbtn === "Login" ? setLogbtn("Logout") : setLogbtn("Login");
@@ -45,6 +45,7 @@ const Header = () => {
           >
             {logbtn}
           </button>
+          </Link>
         </ul>
       </div>
     </div>
